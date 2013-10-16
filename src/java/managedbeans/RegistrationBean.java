@@ -4,7 +4,8 @@
  */
 package managedbeans;
 
-import java.sql.Date;
+//import java.sql.Date;
+import java.util.Date;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.ManagedBean;
 

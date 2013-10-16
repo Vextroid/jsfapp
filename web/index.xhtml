@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Login</title>
+        <h:outputStylesheet library="css" name="styles.css"/>
+    </h:head>
+    <h:body>
+        
+        <h3>Login Page</h3>
+        <div class="formBody">
+            <h:form class="loginForm">
+                <div class="form_row">
+                    <h:outputLabel class="Info" value="User Name:" for="userName"/>
+                    <h:inputText id="userName" label="User Name" required="true" value="#{registrationBean.firstName}" />
+                    <div class="error"><h:message for="userName"/></div>
+                </div>
+                <div class="form_row">
+                    <h:outputLabel class="Info" value="Password:" for="password"/>
+                    <h:inputText id="password" label="Password" required="true" value="#{registrationBean.age}"/>
+                    <div class="error"><h:message class="error" for="password"/></div>
+                </div>
+                <div class="form_row">
+                    <h:commandButton class="loginButton" value="Login" action="ATM" />
+                </div>               
+            </h:form>
+        </div>    
+    </h:body>
+</html>
+

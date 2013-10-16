@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Home Loan Wizard</title>
+        <h:outputStylesheet library="css" name="styles.css"/>
+    </h:head>
+    <h:body>
+        
+        <h3>Home Loan Wizard step 3</h3>
+        <div class="formBody">
+            <h:form class="HomeLoanForm">
+                
+                <div class="form_row">
+                    <h:outputLabel class="Info" value="Email Address:" for="email"/>
+                    <h:inputText id="email" label="Email Address" required="true" value="#{registrationBean.email}">
+                        <f:validator validatorId="emailValidator"/>
+                    </h:inputText>
+                    <div class="error"><h:message for="email" /></div>
+                </div>
+                
+                <div class="form_row">
+                    <h:outputLabel class="Info" for="phone" value="Phone:"/>
+                    <h:inputText id="phone" label="Phone" required="true" value="#{registrationBean.age}">
+                        <f:validator validatorId="ageValidator"/>
+                    </h:inputText>
+                    <div class="error"><h:message for="phone"/></div>
+                </div>
+                
+                <div class="form_row">
+                    <h:outputLabel class="Info" for="address" value="Address:"/>
+                    <h:inputText id="address" label="Address" required="true"  value="#{registrationBean.age}">
+                        <f:validator validatorId="ageValidator"/>
+                    </h:inputText>
+                    <div class="error"><h:message for="address"/></div>
+                </div>
+                
+                <div class="form_row">
+                    <h:commandButton class="next" value="Next" action="HomeLoan4" />
+                </div>
+            </h:form>
+        </div>
+        
+    </h:body>
+</html>
+

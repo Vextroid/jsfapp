@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Home Loan Wizard</title>
+        <h:outputStylesheet library="css" name="styles.css"/>
+    </h:head>
+    <h:body>
+        
+        <h3>Home Loan Wizard step 2</h3>
+        <div class="formBody">
+            <h:form class="HomeLoanForm">
+                
+                <div class="form_row">
+                    <h:outputLabel class="Info" value="Current Job:" for="currentJob"/>
+                    <h:inputText id="currentJob" label="Current Job" required="true" value="#{registrationBean.currentJob}" />
+                    <div class="error"><h:message for="currentJob" /></div>
+                </div>
+                
+                <div class="form_row">
+                    <h:outputLabel class="Info" value="Salary Per Year:" for="salaryPerYear"/>
+                    <h:inputText id="salaryPerYear" label="Salary Per Year" required="true" value="#{registrationBean.salary}" >
+                        <f:validator validatorId="numValidator"/>
+                    </h:inputText>
+                    <div class="error"><h:message for="salaryPerYear" /></div>
+                </div>
+                
+                <div class="form_row">
+                    <h:commandButton class="next" value="Next" action="HomeLoan3" />
+                </div>
+            </h:form>
+        </div>
+        
+    </h:body>
+</html>
+

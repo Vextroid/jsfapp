@@ -16,7 +16,7 @@
                     <div class="form_row">
                         <h:outputLabel class="Info" value="Deposit:" for="deposit"/>
                         <h:inputText id="deposit" label="Deposit" required="true" value="#{registrationBean.deposit}" >
-                            <f:validator validatorId="numVlidator"/>
+                            <f:validator validatorId="numValidator"/>
                         </h:inputText>
                         <h:commandButton class="ok" value="ok" action="confirmation" />
                         <div class="error"><h:message class="error" for="deposit"/></div>
@@ -27,7 +27,7 @@
                     <div class="form_row">
                         <h:outputLabel class="Info" value="Withdraw:" for="withdraw"/>
                         <h:inputText id="withdraw" label="Withdraw" required="true" value="#{registrationBean.withdraw}">
-                            <f:validator validatorId="numVlidator"/>
+                            <f:validator validatorId="numValidator"/>
                         </h:inputText>
                         <h:commandButton class="ok" value="ok" action="confirmation" />
                         <div class="error"><h:message class="error" for="withdraw"/></div>

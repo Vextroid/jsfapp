@@ -44,19 +44,23 @@
                 </div>
                 
                 <div class="form_row">
-                    <h:outputLabel class="Info" for="mm/dd/yy" value="MM/DD/YY:"/>
-                    <h:inputText id="mm" label="MM" size="2" required="true" value="#{registrationBean.month}">
+                    <h:outputLabel class="Info" for="date" value="MM-DD-YYYY:"/>
+                    <h:inputText id="date" value="#{registrationBean.date}" required="true" label="Date" >
+                        <f:convertDateTime pattern="dd-mm-yyyy" />
+                    </h:inputText>
+                    <div class="error"><h:message for="date" /></div>
+                    <!--<h:inputText id="mm" label="MM" size="2" required="true" value="{registrationBean.month}">
                         <f:validator validatorId="numValidator" for="mm"/>
                     </h:inputText>/
-                    <h:inputText id="dd" label="DD" size="2" required="true" value="#{registrationBean.day}">
+                    <h:inputText id="dd" label="DD" size="2" required="true" value="{registrationBean.day}">
                         <f:validator validatorId="numValidator" for="dd"/>
                     </h:inputText>/
-                    <h:inputText id="yy" label="YY" size="2" required="true" value="#{registrationBean.year}">
-                        <f:validator validatorId="numValidator" for="yy"/>
+                    <h:inputText id="yy" label="YY" size="2" required="true" value="{registrationBean.year}">
+                        <f:validator validatorId="yyValidator" for="yy"/>
                     </h:inputText>
                     <div class="error"><h:message for="mm"/></div>
                     <div class="error"><h:message for="dd"/></div>
-                    <div class="error"><h:message for="yy"/></div>
+                    <div class="error"><h:message for="yy"/></div>-->
                 </div>
                 
                 <div class="form_row">

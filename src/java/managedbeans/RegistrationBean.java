@@ -1,3 +1,9 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package managedbeans;
+
 //import java.sql.Date;
 import java.util.Date;
 import javax.faces.bean.RequestScoped;

@@ -15,13 +15,13 @@
                 
                 <div class="form_row">
                     <h:outputLabel class="Info" value="Current Job:" for="currentJob"/>
-                    <h:inputText id="currentJob" label="Current Job" required="true" value="#{registrationBean.currentJob}" />
+                    <h:inputText id="currentJob" label="Current Job" required="true" value="#{homeloanBeanTwo.currJob}" />
                     <div class="error"><h:message for="currentJob" /></div>
                 </div>
                 
                 <div class="form_row">
                     <h:outputLabel class="Info" value="Salary Per Year:" for="salaryPerYear"/>
-                    <h:inputText id="salaryPerYear" label="Salary Per Year" required="true" value="#{registrationBean.salary}" >
+                    <h:inputText id="salaryPerYear" label="Salary Per Year" required="true" value="#{homeloanBeanTwo.salary}" >
                         <f:validator validatorId="numValidator"/>
                     </h:inputText>
                     <div class="error"><h:message for="salaryPerYear" /></div>

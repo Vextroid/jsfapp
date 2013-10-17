@@ -14,7 +14,7 @@
             <h:form class="HomeLoanForm">
                 <div class="form_row">
                     <h:outputLabel class="Info" value="Salutation: " for="salutation"/>
-                    <h:selectOneMenu id="salutation" label="Salutation" value="#{registrationBean.salutation}" required="true" >
+                    <h:selectOneMenu id="salutation" label="Salutation" value="#{homeloanBeanOne.title}" required="true" >
                         <f:selectItem itemLabel="" itemValue=""/>
                         <f:selectItem itemLabel="Mr." itemValue="MR"/>
                         <f:selectItem itemLabel="Mrs." itemValue="MRS"/>
@@ -23,29 +23,28 @@
                         <f:selectItem itemLabel="Dr." itemValue="DR"/>
                     </h:selectOneMenu>
                     <div class="error"><h:message class="error" for="salutation"/></div>
-                </div>
-                
+                </div>                
                 <div class="form_row">
                     <h:outputLabel class="Info" value="First Name:" for="firstName"/>
-                    <h:inputText id="firstName" label="First Name" required="true" value="#{registrationBean.firstName}" />
+                    <h:inputText id="firstName" label="First Name" required="true" value="#{homeloanBeanOne.fName}" />
                     <div class="error"><h:message for="firstName" /></div>
                 </div>
                 
                 <div class="form_row">
                     <h:outputLabel class="Info" value="Last Name:" for="lastName"/>
-                    <h:inputText id="lastName" label="Last Name" required="true" value="#{registrationBean.lastName}" />
+                    <h:inputText id="lastName" label="Last Name" required="true" value="#{homeloanBeanOne.lName}" />
                     <div class="error"><h:message for="lastName" /></div>
                 </div>
                 
                 <div class="form_row">
                     <h:outputLabel class="Info" for="address" value="Address:"/>
-                    <h:inputText id="address" label="Address" required="true"  value="#{registrationBean.address}"/>
+                    <h:inputText id="address" label="Address" required="true"  value="#{homeloanBeanOne.address}"/>
                     <div class="error"><h:message for="address"/></div>
                 </div>
                 
                 <div class="form_row">
                     <h:outputLabel class="Info" for="date" value="DOB(MM/DD/YYYY):"/>
-                    <h:inputText id="date" value="#{registrationBean.date}" required="true" label="Date" >
+                    <h:inputText id="date" value="#{homeloanBeanOne.date}" required="true" label="Date" >
                         <!--<f:convertDateTime type="date" pattern="mm/dd/yyyy" />-->
                         <f:validator validatorId="dateValidator"/>
                     </h:inputText>

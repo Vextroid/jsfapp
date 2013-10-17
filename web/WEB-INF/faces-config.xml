@@ -17,7 +17,21 @@
       <to-view-id>/index.xhtml</to-view-id> 
     </navigation-case> 
   </navigation-rule>
-    <managed-bean>
+
+<navigation-rule> 
+    <from-view-id>/ATM.xhtml</from-view-id> 
+    <navigation-case> 
+      <from-outcome>true</from-outcome> 
+      <to-view-id>/ATM.xhtml</to-view-id> 
+    </navigation-case> 
+    <navigation-case> 
+      <from-outcome>false</from-outcome> 
+      <to-view-id>/ATM.xhtml</to-view-id> 
+    </navigation-case> 
+  </navigation-rule>
+
+
+  <managed-bean>
         <managed-bean-name>customer</managed-bean-name>
         <managed-bean-class>beans.Customer</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
@@ -40,6 +54,21 @@
     <managed-bean>
         <managed-bean-name>manageATM</managed-bean-name>
         <managed-bean-class>managedbeans.ManageATM</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>manageHomeLoan2</managed-bean-name>
+        <managed-bean-class>managedbeans.ManageHomeLoan2</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>manageHomeLoan3</managed-bean-name>
+        <managed-bean-class>managedbeans.ManageHomeLoan3</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>manageHomeLoan4</managed-bean-name>
+        <managed-bean-class>managedbeans.ManageHomeLoan4</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
 </faces-config>    

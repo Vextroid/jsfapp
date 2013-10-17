@@ -5,12 +5,27 @@
 package managedbeans;
 
 import java.util.Date;
+import javax.annotation.Resource;
+import javax.faces.bean.RequestScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.jms.JMSConnectionFactory;
+import javax.jms.JMSContext;
+import javax.jms.Queue;
 
 /**
  *
  * @author Vextroid
  */
+
+    @Named(value = "custoemrBean")
+    @RequestScoped
 public class Customer {
+    @Resource(mappedName = "jms/messageQue")
+    private Queue messageQue;
+    @Inject
+    @JMSConnectionFactory("java:comp/DefaultJMSConnectionFactory")
+    private JMSContext context;
 
     /**
      * Creates a new instance of Customer
@@ -63,6 +78,10 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    private void sendJMSMessageToMessageQue(String messageData) {
+        context.createProducer().send(messageQue, messageData);
     }
     
     

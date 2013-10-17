@@ -28,10 +28,9 @@
                         <h:outputLabel class="Info" value="Withdraw:" for="withdraw"/>
                         <h:inputText id="withdraw" label="Withdraw" required="true" value="#{manageATM.withdrawlAmount}"/>                   
                         <h:commandButton class="ok" value="ok" action="#{manageATM.makeWithdrawl(withdraw)}" />
-                        <div class="error"><h:message class="error" for="withdraw"/></div>
-                    </div>
+                    </div>    
                 </h:form>
-            
+                
                 <h:form class='subForm'>
                     <div class="form_row">
                         <h:outputLabel class="Info" for="toAccount" value="To Account:"/>
@@ -53,7 +52,7 @@
                     </div>
                 </h:form>
             </div>
-        </div>    
+        </div>
     </h:body>
 </html>
 

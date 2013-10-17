@@ -241,7 +241,8 @@ public class ManageATM {
             sqlStatement.setInt(1,currBal);
             sqlStatement.setString(2,acc);
             sqlStatement.executeUpdate();
-         
+            isOk = "True";
+            return isOk;
           //PreparedStatement sqlStatement2 = connection.prepareStatement("INSERT INTO DBUSR.SAVINGS      (C_ID, ACC_NUM, BALANCE)"       + "VALUES(?,?,?)", Statement.RETURN_GENERATED_KEYS);   
 //            PreparedStatement inserter = connection.prepareStatement("INSERT INTO DBUSR.TRANSACTIONS (ACC_NUM, AMOUNT, DESCRIPTION)" + "VALUES(?,?,?)", Statement.RETURN_GENERATED_KEYS);
 //          
@@ -260,12 +261,14 @@ public class ManageATM {
           //customer.DOB = result.getString(4);
           //customer.ADDRESS = result.getString(5);
           //System.out.println("Customer" + customer.C_ID + "created.");
-          ret
+         // ret
         }
         catch (SQLException sqlException)
                 {
                   System.out.println("Could not make a deposit.");
                   sqlException.printStackTrace();
+                  isOk = "False";
+            return isOk;
                 }
     }
     

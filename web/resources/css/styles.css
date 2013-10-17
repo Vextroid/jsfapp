@@ -39,10 +39,10 @@ h3 {
 }
 
 .Info {
-    width: 100px;
+    width: 150px;
     text-align: right;
     float: left;
-    padding: 4px 5px 0 0;
+    padding: 4px 10px 0 0;
 }
 
 .form_row{

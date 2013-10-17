@@ -44,23 +44,34 @@
                 </div>
                 
                 <div class="form_row">
-                    <h:outputLabel class="Info" for="mm/dd/yy" value="MM/DD/YY:"/>
-                    <h:inputText id="mm" label="MM" size="2" required="true" value="#{registrationBean.month}">
+                    <h:outputLabel class="Info" for="date" value="DOB(MM/DD/YYYY):"/>
+                    <h:inputText id="date" value="#{registrationBean.date}" required="true" label="Date" >
+                        <!--<f:convertDateTime type="date" pattern="mm/dd/yyyy" />-->
+                        <f:validator validatorId="dateValidator"/>
+                    </h:inputText>
+                    <div class="error"><h:message for="date" /></div>
+                    <!--<h:inputText id="mm" label="MM" size="2" required="true" value="{registrationBean.month}">
                         <f:validator validatorId="numValidator" for="mm"/>
                     </h:inputText>/
-                    <h:inputText id="dd" label="DD" size="2" required="true" value="#{registrationBean.day}">
+                    <h:inputText id="dd" label="DD" size="2" required="true" value="{registrationBean.day}">
                         <f:validator validatorId="numValidator" for="dd"/>
                     </h:inputText>/
-                    <h:inputText id="yy" label="YY" size="2" required="true" value="#{registrationBean.year}">
-                        <f:validator validatorId="numValidator" for="yy"/>
+                    <h:inputText id="yy" label="YY" size="2" required="true" value="{registrationBean.year}">
+                        <f:validator validatorId="yyValidator" for="yy"/>
                     </h:inputText>
                     <div class="error"><h:message for="mm"/></div>
                     <div class="error"><h:message for="dd"/></div>
-                    <div class="error"><h:message for="yy"/></div>
+                    <div class="error"><h:message for="yy"/></div>-->
                 </div>
                 
                 <div class="form_row">
                     <h:commandButton class="next" value="Next" action="HomeLoan2" />
+                </div>
+            </h:form>
+            
+            <h:form class="HomeLoanForm">
+                <div class="form_row">
+                    <h:commandButton class="back" value="Back" action="ATM" />
                 </div>
             </h:form>
         </div>

@@ -1,9 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package managedbeans;
-
+//import java.sql.Date;
+import java.util.Date;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.ManagedBean;
 
@@ -26,10 +22,12 @@ public class RegistrationBean {
     private String address;
   
     private Integer phone;
-    private Integer month;
-    private Integer day;
-    private Integer year;
-    
+//    private Integer month;
+//    private Integer day;
+//    private Integer year;
+    private Date date;
+
+
     private Integer age;
     
     private Integer salary;
@@ -40,6 +38,15 @@ public class RegistrationBean {
     private Integer deposit;
     private Integer withdraw;
     
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }    
+      
     public String getAddress() {
         return address;
     }
@@ -64,29 +71,29 @@ public class RegistrationBean {
         this.phone = phone;
     }
 
-    public Integer getMm() {
-        return month;
-    }
-
-    public void setMm(Integer mm) {
-        this.month = mm;
-    }
-
-    public Integer getDd() {
-        return day;
-    }
-
-    public void setDd(Integer dd) {
-        this.day = dd;
-    }
-
-    public Integer getYear() {
-        return year;
-    }
-
-    public void setYear(Integer year) {
-        this.year = year;
-    }
+//    public Integer getMonth() {
+//        return month;
+//    }
+//
+//    public void setMonth(Integer month) {
+//        this.month = month;
+//    }
+//
+//    public Integer getDay() {
+//        return day;
+//    }
+//
+//    public void setDay(Integer day) {
+//        this.day = day;
+//    }
+//
+//    public Integer getYear() {
+//        return year;
+//    }
+//
+//    public void setYear(Integer year) {
+//        this.year = year;
+//    }
 
     public Integer getSalary() {
         return salary;

@@ -1,0 +1,45 @@
+ <faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
+
+
+<navigation-rule> 
+    <from-view-id>/index.xhtml</from-view-id> 
+    <navigation-case> 
+      <from-outcome>true</from-outcome> 
+      <to-view-id>/ATM.xhtml</to-view-id> 
+    </navigation-case> 
+    <navigation-case> 
+      <from-outcome>false</from-outcome> 
+      <to-view-id>/index.xhtml</to-view-id> 
+    </navigation-case> 
+  </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>customer</managed-bean-name>
+        <managed-bean-class>beans.Customer</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>manageLogin</managed-bean-name>
+        <managed-bean-class>managedbeans.ManageLogin</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>manageLogin1</managed-bean-name>
+        <managed-bean-class>managedbeans.ManageLogin</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>manageHomeLoan</managed-bean-name>
+        <managed-bean-class>managedbeans.ManageHomeLoan</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>manageATM</managed-bean-name>
+        <managed-bean-class>managedbeans.ManageATM</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+</faces-config>    

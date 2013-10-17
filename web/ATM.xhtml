@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>ATM</title>
+        <h:outputStylesheet library="css" name="styles.css"/>
+    </h:head>
+    <h:body>
+        <h:inputHidden value="14" id="custID" />
+        <h:inputHidden value="Name" id="fName" />
+        
+        <h3>ATM Page</h3>
+        <div class="formBody">
+            <div class ="ATMForm">
+                <h:form class='subForm'>
+                    <div class="form_row">
+                        <h:outputLabel class="Info" value="Deposit:" for="deposit"/>
+                        <h:inputText id="deposit" label="Deposit" required="true" value="#{manageATM.depositAmount}" />                   
+                        <h:commandButton class="ok" value="ok" action="#{manageATM.makeDeposit(deposit)}" />
+                        <div class="error"><h:message class="error" for="deposit"/></div>
+                    </div>
+                </h:form>
+            
+                <h:form class='subForm'>
+                    <div class="form_row">
+                        <h:outputLabel class="Info" value="Withdraw:" for="withdraw"/>
+                        <h:inputText id="withdraw" label="Withdraw" required="true" value="#{manageATM.withdrawlAmount}"/>                   
+                        <h:commandButton class="ok" value="ok" action="#{manageATM.makeWithdrawl(withdraw)}" />
+                        <div class="error"><h:message class="error" for="withdraw"/></div>
+                    </div>
+                </h:form>
+            
+                <h:form class='subForm'>
+                    <div class="form_row">
+                        <h:outputLabel class="Info" for="toAccount" value="To Account:"/>
+                        <h:selectOneMenu id="toAccount" label="To Account" value="#{registrationBean.salutation}" required="true" >
+                            <f:selectItem itemLabel="" itemValue=""/>
+                            <f:selectItem itemLabel="1" itemValue="1"/>
+                            <f:selectItem itemLabel="2" itemValue="2"/>
+                            <f:selectItem itemLabel="3" itemValue="3"/>
+                        </h:selectOneMenu>
+                        <h:commandButton class="ok" value="ok" action="confirmation" />
+                        <div class="error"><h:message class="error" for="toAccount"/></div>                     
+                    </div>               
+                </h:form>
+            
+                <h:form class='subForm'>
+                    <div class="form_row">
+                        <h:outputLabel class="Info" value="Home Loan:"/>
+                        <h:commandButton class="createHomeLoan" value="Create Home Loan" action="HomeLoan1" />
+                    </div>
+                </h:form>
+            </div>
+        </div>    
+    </h:body>
+</html>
+
